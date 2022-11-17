@@ -1,0 +1,29 @@
+import java.util.Scanner;
+
+public class negoziante {
+    public static void main(String[] args){
+        double spesa;
+        Scanner n=new Scanner(System.in);
+        spesa=n.nextInt();
+        double sconto_5= 5.0/100.0;
+        double sconto_10= 10.0/100.0;
+        System.out.println(sconto_10);
+
+        if(spesa>100000 && spesa<300000)
+         {
+           double daToglie= spesa*sconto_5;
+           spesa -= daToglie;
+           System.out.println("Lei deve pagare: ");
+           System.out.println(spesa);
+           System.exit(0);
+
+         } 
+        if(spesa>300000){
+            double daToglie=spesa*sconto_10;
+            spesa=spesa-daToglie;
+            System.out.println("Lei deve pagare: ");
+            System.out.println(spesa);
+            System.exit(0);
+        }
+    }
+}
